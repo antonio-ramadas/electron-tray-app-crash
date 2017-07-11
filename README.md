@@ -1,5 +1,5 @@
 # Electron Tray *destroy* method crashes the app
-This repository has been created to demonstrated a possible a bug on Electron 1.6.11 on macOS 10.12.5 with npm 5.0.3.
+This repository has been created to demonstrated a possible a bug on Electron 1.6.11 on macOS 10.12.5 with npm 5.0.3. This issue has been created by me on the Electron project. Check it [here](https://github.com/electron/electron/issues/9982).
 
 ## Install
 Install the dependencies (just Electron) with `npm install`
@@ -15,4 +15,3 @@ Create and destroy the tray instance multiple times with no issues or faulty beh
 
 ## How to reproduce the crash
 Create the tray instance and destroy it, one after the other. You may need to repeat these steps multiple times. The crash will eventually happen when destroying the instance. The app crash seems to happen randomly. From my experience, it may happen on the first time or only after multiple repetitions (7 or so). The app will crash with `Received signal 11 SEGV_MAPERR` followed by the stack dump.
-
